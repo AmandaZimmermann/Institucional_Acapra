@@ -1,0 +1,94 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.initial-section {
+    background-color: #565186;
+    padding: 32px 100px 0 100px;
+    height: 1080px;
+}
+
+.initial-section h1 {
+  font-size: 80px;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.initial-section p {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar__menu a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar__logo-icon {
+  height: 50px;
+}
+
+.navbar__logo-text {
+  height: 25px;
+}
+
+.navbar_button {
+  background-color: #7B58C2;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+#link-home {
+  color: #7B58C2;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+}
+
+.banner img {
+  height: 790px;
+}
+
+.banner__adopt, .banner__help {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 3em;
+  border-radius: 8px;
+}
+
+.banner__adopt {
+  background-color: #FFFFFF;
+  color: #7B58C2;
+}
+
+.banner__help {
+  border: solid 1px #FFFFFF;
+  color: #FFFFFF;
+}
