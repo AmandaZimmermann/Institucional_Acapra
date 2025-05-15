@@ -1,0 +1,146 @@
+/* Cores */
+:root {
+  --roxo-principal: #565186;
+  --roxo-botao: #7B58C2;
+  --fundo-bege: #FFFBF2;
+  --branco: #FFFFFF;
+  --cinza: #8E8E8E;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--roxo-principal);
+}
+
+.logo {
+  height: 40px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  justify-content: space-between;
+  padding: 30px;
+  margin-top: 32px;
+  margin-inline: 100px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar__menu a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar__logo-icon {
+  height: 50px;
+}
+
+.navbar__logo-text {
+  height: 25px;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar_button {
+  background-color: #7B58C2;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-adotar {
+  background-color: var(--roxo-botao);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content {
+  background-color: var(--fundo-bege);
+  margin: 40px auto;
+  padding: 40px;
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.voluntario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.voluntario h2 {
+  font-size: 42px !important;
+}
+
+.doacao, .voluntario {
+  width: 45%;
+  text-align: center;
+}
+
+.doacao h2, .voluntario h2 {
+  color: var(--roxo-principal);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.qrcode {
+  width: 250px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.doacao p {
+  color: var(--cinza);
+  font-size: 14px;
+}
+
+.divider {
+  width: 1px;
+  background-color: #ccc;
+}
+
+.btn-voluntario {
+  display: inline-block;
+  background-color: var(--roxo-botao);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.info {
+  font-size: 13px;
+  color: var(--cinza);
+  margin: 20px 0;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 0 10px;
+}
