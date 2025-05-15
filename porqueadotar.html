@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animais para Adoção</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #565186;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 180px 0px 0px 0px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #565186;
+            margin-bottom: 24px;
+        }
+
+        .b_adocao_section {
+            background-color: #FFFBF2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 22px 80px;
+            border-radius: 8px;
+            margin-bottom: 48px;
+            ;
+        }
+
+        .b_carousel_area_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .b_carousel_container {
+            position: relative;
+            width: 100%;
+            max-width: 880px;
+        }
+
+        .b_carousel_viewport {
+            margin: 0px 32px;
+            overflow: hidden;
+        }
+
+        .b_carousel {
+            display: flex;
+            gap: 16px;
+            transition: transform 0.4s ease;
+        }
+
+        .b_card {
+            flex: 0 0 260px;
+            height: 360px;
+            background: #2C2046;
+            border-radius: 8px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .b_card_img {
+            flex: 0 0 60%;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 100%;
+        }
+
+        .b_card_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        .b_card_content_img {
+            margin: 16px 16px 0px 16px;
+        }
+
+        .b_card_info {
+            flex: 1;
+            background-color: #FFFBF2;
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 16px;
+
+        }
+
+        .b_card_content_left {
+            width: calc(100% - 68px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .b_card_content_right {
+            width: 70px;
+            height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .b_nome {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .b_det {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .b_badge {
+            margin-top: -24px;
+            height: 78px;
+            width: 70px;
+            margin-left: 16px;
+            background: #7B58C2;
+            color: #FFF;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: -webkit-center;
+            padding: 4px 8px;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 90%, 50% 60%, 50% 60%, 0 90%, 0 0);
+        }
+
+        .b_nav_btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 50%;
+            background: #FFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .b_left {
+            left: -16px;
+        }
+
+        .b_right {
+            right: -16px;
+        }
+
+        .b_dots {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .b_dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #BDBDBD;
+            display: block;
+        }
+
+        .b_dots span.active {
+            background: #7B58C2;
+        }
+
+        #porque_adotar {
+            background-color: #FFFBF2;
+            font-family: Roboto;
+            color: #000000;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 128px;
+        }
+
+        #porque_adotar>div>h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 24px;
+            padding-top: 32px;
+        }
+
+        .b_content_text {
+            margin: 0px 100px;
+            height: 100%;
+        }
+
+        .b_title_principal {
+            font-family: Roboto, sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 24px;
+            color: #000;
+        }
+
+        .b_paragrafo_intro {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            text-align: justify;
+            color: #000;
+        }
+
+        .b_subtitulo {
+            font-family: Roboto, sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 32px;
+            color: #000;
+        }
+
+        .b_lista_requisitos {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            margin-top: 12px;
+            padding-left: 20px;
+            color: #000;
+        }
+
+        .b_item_lista {
+            margin-bottom: 6px;
+        }
+
+        .b_alerta {
+            font-weight: 600;
+        }
+
+        .b_container_botoes {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .b_botao_acao {
+            background-color: #8858C7;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: Roboto, sans-serif;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .mt-24 {
+            margin-top: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="imagens_animais" class="b_adocao_section">
+
+        <h1>Animais para Adoção</h1>
+        <div class="b_carousel_area_container">
+
+            <div class="b_carousel_container">
+                <button class="b_nav_btn b_left" id="prev">‹</button>
+                <div class="b_carousel_viewport">
+                    <div class="b_carousel" id="carousel">
+                        <div class="b_card">
+                            <div class="b_card_content_img">
+                                <div class="b_card_img">
+                                    <img src="https://placekitten.com/260/216" alt="Luzia">
+                                </div>
+                            </div>
+                            <div class="b_card_info">
+                                <div class="b_card_content_left">
+                                    <div class="b_nome">Luzia</div>
+                                    <div class="b_det">2 anos</div>
+                                    <div class="b_det">Fêmea</div>
+                                    <div class="b_det">Castrada e vacinada</div>
+                                </div>
+                                <div class="b_card_content_right">
+                                    <div class="b_badge">Felv+</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b_card">
+                            <div class="b_card_content_img">
+                                <div class="b_card_img">
+                                    <img src="https://placekitten.com/261/216" alt="Bartô">
+                                </div>
+                            </div>
+                            <div class="b_card_info">
+                                <div class="b_card_content_left">
+                                    <div class="b_nome">Bartô</div>
+                                    <div class="b_det">3 meses</div>
+                                    <div class="b_det">Macho</div>
+                                    <div class="b_det">Vacinado</div>
+                                </div>
+                                <div class="b_card_content_right">
+                                    <div class="b_badge">Vacina</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b_card">
+                            <div class="b_card_content_img">
+                                <div class="b_card_img">
+                                    <img src="https://placedog.net/260/216?2" alt="Luma">
+                                </div>
+                            </div>
+                            <div class="b_card_info">
+                                <div class="b_card_content_left">
+                                    <div class="b_nome">Luma</div>
+                                    <div class="b_det">3 anos</div>
+                                    <div class="b_det">Fêmea</div>
+                                    <div class="b_det">Castrada e vacinada</div>
+                                </div>
+                                <div class="b_card_content_right">
+                                    <div class="b_badge">Porte G</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b_card">
+                            <div class="b_card_content_img">
+                                <div class="b_card_img">
+                                    <img src="https://placedog.net/261/216?3" alt="Rex">
+                                </div>
+                            </div>
+                            <div class="b_card_info">
+                                <div class="b_card_content_left">
+                                    <div class="b_nome">Rex</div>
+                                    <div class="b_det">5 anos</div>
+                                    <div class="b_det">Macho</div>
+                                    <div class="b_det">Castrado e vacinada</div>
+                                </div>
+                                <div class="b_card_content_right">
+                                    <div class="b_badge">Porte M</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b_card">
+                            <div class="b_card_content_img">
+                                <div class="b_card_img">
+                                    <img src="https://placekitten.com/262/216" alt="Mia">
+                                </div>
+                            </div>
+                            <div class="b_card_info">
+                                <div class="b_card_content_left">
+                                    <div class="b_nome">Mia</div>
+                                    <div class="b_det">1 ano</div>
+                                    <div class="b_det">Fêmea</div>
+                                    <div class="b_det">Castrada e vacinada</div>
+                                </div>
+                                <div class="b_card_content_right">
+                                    <div class="b_badge">Porte P</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b_card">
+                            <div class="b_card_content_img">
+                                <div class="b_card_img">
+                                    <img src="https://placedog.net/262/216?4" alt="Bolt">
+                                </div>
+                            </div>
+                            <div class="b_card_info">
+                                <div class="b_card_content_left">
+                                    <div class="b_nome">Bolt</div>
+                                    <div class="b_det">2 anos</div>
+                                    <div class="b_det">Macho</div>
+                                    <div class="b_det">Vacinado</div>
+                                </div>
+                                <div class="b_card_content_right">
+                                    <div class="b_badge">Porte G</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="b_nav_btn b_right" id="next">›</button>
+            </div>
+
+            <div class="b_dots" id="dots"></div>
+        </div>
+        <script>
+            const carousel = document.getElementById('carousel');
+            const prevBtn = document.getElementById('prev');
+            const nextBtn = document.getElementById('next');
+            const dots = document.getElementById('dots');
+            const cards = carousel.children;
+            const perPage = 3, gap = 16;
+            const pages = Math.ceil(cards.length / perPage);
+            let page = 0;
+            function drawDots() { dots.innerHTML = ''; for (let i = 0; i < pages; i++) { const d = document.createElement('span'); if (i === page) d.classList.add('active'); dots.append(d); } }
+            function move() { const offset = page * (260 + gap) * perPage; carousel.style.transform = `translateX(-${offset}px)`; drawDots(); }
+            prevBtn.onclick = () => { if (page > 0) { page--; move(); } };
+            nextBtn.onclick = () => { if (page < pages - 1) { page++; move(); } };
+            drawDots();
+        </script>
+    </section>
+    <section id="porque_adotar">
+        <div class="b_content_text">
+
+            <h1 class="b_title_principal">
+                Por que Adotar um Gato ou Cachorro?
+            </h1>
+
+            <div class="b_paragrafo_intro">
+                Adotar um animal é um ato de amor que salva vidas. Milhares de cães e gatos vivem em abrigos ou nas
+                ruas,
+                esperando por um lar. Ao adotar, você oferece segurança, carinho e uma nova chance para um animal que
+                precisa.
+            </div>
+            <div class="b_paragrafo_intro">
+                Além disso, eles retribuem com amor incondicional, fazem companhia e ajudam a reduzir o estresse do dia
+                a
+                dia. Antes de adotar, é importante garantir que você tem tempo e condições para cuidar bem do novo
+                amigo.
+            </div>
+            <div class="b_paragrafo_intro">
+                Se deseja um companheiro fiel e quer fazer a diferença, adotar é a melhor escolha!
+            </div>
+
+            <h2 class="b_subtitulo">
+                Confira as informações abaixo para adotar um pet e dar a ele um novo lar:
+            </h2>
+            <ul class="b_lista_requisitos">
+                <li class="b_item_lista">Entrevista via WhatsApp, com fotos do local onde o animal irá ficar;</li>
+                <li class="b_item_lista">Foto de documentos solicitados pela ONG;</li>
+                <li class="b_item_lista">Pagamento da taxa de adoção de R$30,00</li>
+            </ul>
+
+            <h2 class="b_subtitulo mt-24">
+                Documentos necessários para adoção:
+            </h2>
+            <ul class="b_lista_requisitos">
+                <li class="b_item_lista">Documento com foto - RG ou CNH;</li>
+                <li class="b_item_lista">Comprovante de renda;</li>
+                <li class="b_item_lista">Comprovante de residência;</li>
+                <li class="b_item_lista">Foto do local onde o animal irá viver (cercado, terreno e casa);</li>
+                <li class="b_item_lista">Apresentar outros animais: Fotos dos animais e fotos da carteirinha de
+                    vacinação de todos;</li>
+                <li class="b_item_lista">Se comprometer mediante assinatura com a castração e vacinação do animal
+                    adotado;</li>
+                <li class="b_item_lista b_alerta">Sem esses documentos não será possível adotar!</li>
+            </ul>
+
+            <h2 class="b_subtitulo mt-24">
+                Atenção! O processo de adoção será suspenso caso o interessado:
+            </h2>
+            <ul class="b_lista_requisitos">
+                <li class="b_item_lista">Não tenha condições financeiras, físicas ou mentais de manter um animal;</li>
+                <li class="b_item_lista">Pense em doar o animal futuramente;</li>
+                <li class="b_item_lista">Tenha animais não castrados e/ou vacinados;</li>
+                <li class="b_item_lista">Apresente algum vício ou histórico de maus-tratos ou violências;</li>
+                <li class="b_item_lista">Tenha residência não telada em caso de gatos e residência sem muros ou cercas
+                    em casos de cães;</li>
+                <li class="b_item_lista b_alerta">Um animal é uma vida! Tenha responsabilidade!</li>
+            </ul>
+
+            <div class="b_container_botoes">
+                <button class="b_botao_acao">Adotar um cachorro</button>
+                <button class="b_botao_acao">Adotar um gato</button>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
