@@ -5,17 +5,17 @@ body {
 .initial-section {
     background-color: #565186;
     padding: 32px 100px 0 100px;
-    height: 1080px;
 }
 
 .initial-section h1 {
-  font-size: 80px;
+  white-space: nowrap;
+  font-size: 100px;
   color: #FFFFFF;
   font-weight: 700;
 }
 
 .initial-section p {
-  font-size: 20px;
+  font-size: 25px;
   color: #FFFFFF;
 }
 
@@ -37,6 +37,7 @@ body {
 .navbar__menu {
   display: flex;
   gap: 30px;
+  font-size: 18px;
 }
 
 .navbar__menu a {
@@ -69,17 +70,26 @@ body {
 .banner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .banner img {
-  height: 790px;
+  height: 750px;
 }
 
-.banner__adopt, .banner__help {
+.banner__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 21em;
+  padding-bottom: 5em;
+}
+
+.banner__buttons a {
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
-  padding: 10px 3em;
+  padding: 0.6em 3.2em;
   border-radius: 8px;
 }
 
@@ -91,4 +101,9 @@ body {
 .banner__help {
   border: solid 1px #FFFFFF;
   color: #FFFFFF;
+}
+
+.banner__buttons {
+  display: flex;
+  gap: 18px;
 }
