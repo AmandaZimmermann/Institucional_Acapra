@@ -1,0 +1,280 @@
+* {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #565186;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #565186;
+            margin-bottom: 24px;
+        }
+
+        .b_adocao_section {
+            background-color: #FFFBF2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 22px 80px;
+            border-radius: 8px;
+            margin: 48px 0px;
+            ;
+        }
+
+        .b_carousel_area_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .b_carousel_container {
+            position: relative;
+            width: 100%;
+            max-width: 880px;
+        }
+
+        .b_carousel_viewport {
+            margin: 0px 32px;
+            overflow: hidden;
+        }
+
+        .b_carousel {
+            display: flex;
+            gap: 16px;
+            transition: transform 0.4s ease;
+        }
+
+        .b_card {
+            flex: 0 0 260px;
+            height: 360px;
+            background: #2C2046;
+            border-radius: 8px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .b_card_img {
+            flex: 0 0 60%;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 100%;
+            max-height: 193px;
+            max-width: 228px;;
+        }
+
+        .b_card_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+
+        }
+
+        .b_card_content_img {
+            margin: 16px 16px 0px 16px;
+        }
+
+        .b_card_info {
+            flex: 1;
+            background-color: #FFFBF2;
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 16px;
+
+        }
+
+        .b_card_content_left {
+            width: calc(100% - 68px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .b_card_content_badge {
+            width: 70px;
+            height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .b_nome {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .b_informacoes {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .b_badge {
+            margin-top: -24px;
+            height: 78px;
+            width: 70px;
+            margin-left: 16px;
+            background: #7B58C2;
+            color: #FFF;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: -webkit-center;
+            padding: 4px 8px;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 90%, 50% 60%, 50% 60%, 0 90%, 0 0);
+        }
+        .no_badge{
+            display: none;
+        }
+
+        .b_nav_btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 20px;
+            border: none;
+            border-radius: 50%;
+            background: #000000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            clip-path: polygon(80% 50%, 40% 0, 60% 0%, 100% 50%, 60% 100%, 40% 100%, 80% 50%);
+        }
+
+        .b_left {
+            left: -16px;
+            transform: rotate(180deg);
+        }
+
+        .b_right {
+            right: -16px;
+        }
+
+        .b_dots {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .b_dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #BDBDBD;
+            display: block;
+        }
+
+        .b_dots span.active {
+            background: #7B58C2;
+        }
+
+        #porque_adotar {
+            background-color: #FFFBF2;
+            font-family: Roboto;
+            color: #000000;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 128px;
+        }
+
+        #porque_adotar>div>h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 24px;
+            padding-top: 32px;
+        }
+
+        .b_content_text {
+            margin: 0px 100px;
+            height: 100%;
+        }
+
+        .b_title_principal {
+            font-family: Roboto, sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 24px;
+            color: #000;
+        }
+
+        .b_paragrafo_intro {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            text-align: justify;
+            color: #000;
+        }
+
+        .b_subtitulo {
+            font-family: Roboto, sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 32px;
+            color: #000;
+        }
+
+        .b_lista_requisitos {
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            margin-top: 12px;
+            padding-left: 20px;
+            color: #000;
+        }
+
+        .b_item_lista {
+            margin-bottom: 6px;
+        }
+
+        .b_alerta {
+            font-weight: 600;
+        }
+
+        .b_container_botoes {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .b_btn_acao {
+            background-color: #8858C7;
+            color: #FFFFFF;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: Roboto, sans-serif;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .mt-24 {
+            margin-top: 24px;
+        }
+
+        /* seletor */
+
+        .b_card_info:has(> .no_badge) {
+            justify-content: normal;
+        }
+
