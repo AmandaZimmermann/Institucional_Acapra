@@ -54,7 +54,7 @@ body {
   height: 25px;
 }
 
-.navbar_button {
+.navbar__button {
   background-color: #7B58C2;
   color: #FFFFFF;
   text-decoration: none;
@@ -106,4 +106,61 @@ body {
 .banner__buttons {
   display: flex;
   gap: 18px;
+}
+
+.about-us-section {
+  padding: 32px 100px 0 100px;
+}
+
+.about-us-section h2 {
+  white-space: nowrap;
+  font-size: 70px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.about-us-section p {
+  text-align: justify;
+  font-size: 30px;
+  color: #8E8E8E;
+}
+
+.mission-section {
+  height: 50em;
+  display: flex;
+  align-items: center;
+}
+
+.mission-section__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18em;
+  width: 38em;
+  padding-bottom: 10em;
+}
+
+.mission-section img {
+  position: absolute;
+  right: 0;
+  height: 750px;
+}
+
+.story-section {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.story-section img {
+  position: absolute;
+  left: 0;
+  height: 750px;
+}
+
+.story-section__text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 52em;
 }
