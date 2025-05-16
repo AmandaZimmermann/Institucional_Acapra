@@ -276,3 +276,115 @@ h1 {
     flex-direction: column;
   }
 }
+
+.maus-tratos {
+  font-family: Roboto, sans-serif;
+  background-color: #FFFBF2;
+  color: #000000;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.maus-tratos .container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.maus-tratos h1 {
+  font-weight: 700;
+  font-size: 1.8em;
+  letter-spacing: 0.02em;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.maus-tratos p,
+.maus-tratos li {
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.maus-tratos strong {
+  color: #000000;
+  font-weight: 700;
+}
+
+.maus-tratos ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.maus-tratos footer {
+  background-color: #7B58C2;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 40px;
+  border-radius: 0 0 10px 10px;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.maus-tratos footer span {
+  display: block;
+}
+
+.maus-tratos .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.maus-tratos .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.maus-tratos .icon-filled svg {
+  width: 24px;
+  height: 24px;
+  fill: #FFFFFF;
+  transition: fill 0.3s ease;
+}
+
+.maus-tratos .social-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #FFFFFF;
+  fill: none;
+  transition: stroke 0.3s ease;
+}
+
+.maus-tratos .icon-filled:hover svg {
+  fill: #A38CFF;
+}
+
+.maus-tratos .social-icon:hover svg {
+  stroke: #A38CFF;
+}
+
+
+
+
+
