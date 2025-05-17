@@ -22,13 +22,13 @@
                 <img class="navbar__logo-text" src="assets/icons/logo_escrita.svg" alt="ACAPRA">
             </div>
             <ul class="navbar__menu">
-                <li><a id="link-home">HOME</a></li>
-                <li><a href="home.html#missao">MISSÃO</a></li>
-                <li><a href="home.html#historia">HISTÓRIA</a></li>
-                <li><a href="home.html#noticias">NOTÍCIAS</a></li>
-                <li><a href="contribua.html">CONTRIBUA</a></li>
+                <li><a class="link active" href="#home">HOME</a></li>
+                <li><a class="link" href="#missao">MISSÃO</a></li>
+                <li><a class="link" href="#historia">HISTÓRIA</a></li>
+                <li><a class="link" href="#noticias">NOTÍCIAS</a></li>
+                <li><a class="link" href="contribua.html">CONTRIBUA</a></li>
             </ul>
-            <a class="navbar__button" href="porqueadotar.html">ADOTAR UM AMIGO</a>
+            <a class="navbar_button" href="porqueadotar.html">ADOTAR UM AMIGO</a>
         </nav>
         <div class="banner">
             <div class="banner__text">
@@ -38,15 +38,15 @@
                 </div>
 
                 <div class="banner__buttons">
-                    <a class="banner__adopt" href="">ADOTAR</a>
-                    <a class="banner__help" href="">AJUDE</a>
+                    <a class="banner__adopt" href="porqueadotar.html">ADOTAR</a>
+                    <a class="banner__help" href="contribua.html">AJUDE</a>
                 </div>
             </div>
             <img src="assets/images/cachorro_inicio.png" alt="Cachorro castanho claro com semblante feliz">
         </div>
     </section>
     <section class="about-us-section">
-        <section class="mission-section">
+        <section id="missao" class="mission-section">
             <div class="mission-section__text">
                 <h2>MISSÃO</h2>
                 <p>Nossa missão é resgatar, cuidar e encontrar lares amorosos para esses pets, mostrando a importância do nosso trabalho e o impacto que a adoção pode ter na vida de cada um deles.</p>
@@ -76,7 +76,7 @@
                 </div>
             </div>
         </section>
-         <section class="story-section">
+         <section id="historia" class="story-section">
             <img src="assets/images/gato_historia.png" alt="Gato preto e branco sentado">
             <div class="story-section__text">
                 <h2>HISTÓRIA</h2>
@@ -124,7 +124,7 @@
   </div>
     </section>
 
-    <section class="noticias">
+    <section id="noticias" class="noticias">
         <h1 class="secao2">NOTÍCIAS</h1>
     <hr>
     <div class="colunas">
@@ -280,6 +280,21 @@
         </div>
     </footer>
 </section>
+ <script>
+    // Destaca o link clicado e desmarca os outros.
+    const links = document.querySelectorAll('.link');
+
+    links.forEach(function(link) {
+      link.addEventListener('click', function() {
+        links.forEach(function(l) {
+          l.classList.remove('active');
+        });
+
+        link.classList.add('active');
+      });
+    });
+
+  </script>
 </body>
 
 </html>

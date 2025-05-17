@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -37,7 +41,6 @@ body {
 .navbar__menu {
   display: flex;
   gap: 30px;
-  font-size: 18px;
 }
 
 .navbar__menu a {
@@ -54,7 +57,11 @@ body {
   height: 25px;
 }
 
-.navbar__button {
+li {
+  list-style: none;
+}
+
+.navbar_button {
   background-color: #7B58C2;
   color: #FFFFFF;
   text-decoration: none;
@@ -63,8 +70,8 @@ body {
   font-weight: 600;
 }
 
-#link-home {
-  color: #7B58C2;
+.active {
+  color: #7B58C2 !important;
 }
 
 .banner {
@@ -109,7 +116,7 @@ body {
 }
 
 .about-us-section {
-  padding: 32px 100px 0 100px;
+  padding: 80px 100px 2.5px 100px;
 }
 
 .about-us-section h2 {
@@ -192,7 +199,7 @@ body {
 .story-section img {
   position: absolute;
   left: 0;
-  height: 750px;
+  height: 800px;
 }
 
 .story-section__text {
@@ -200,6 +207,12 @@ body {
   flex-direction: column;
   gap: 25px;
   width: 52em;
+  padding-bottom: 50px;;
+}
+
+.noticias {
+  background-color: #FEF8E2;
+  padding: 40px;
 }
 
 .animaisAdotados {
@@ -210,7 +223,7 @@ body {
   max-width: 100%;
 }
 
-h1 {
+.animaisAdotados h1, .noticias h1 {
   text-align: center;
   font-size: 70px;
   margin-bottom: 40px;
@@ -220,6 +233,7 @@ h1 {
   display: flex;
   gap: 40px;
   margin: 0;
+  text-align: justify;
 }
 
 .secao1 {
@@ -240,7 +254,6 @@ h1 {
 .secao2 {
   flex: 1;
   color: black;
-  background-color: #FEF8E2;
   text-align: center;
 }
 
@@ -262,7 +275,7 @@ h1 {
 .secao2 p {
   font-size: 28px;
   line-height: 1.5;
-  text-align: left;
+  text-align: justify;
   display: flex;
 }
 
