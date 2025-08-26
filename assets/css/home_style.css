@@ -397,7 +397,12 @@ li {
   stroke: #A38CFF;
 }
 
+@media only screen and (max-width: 1400px) {
+  .banner img {
+    height: 500px;
+  }
 
+}
 
 
 
