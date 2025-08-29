@@ -122,14 +122,14 @@ li {
 
 .about-us-section h2 {
   white-space: nowrap;
-  font-size: 60px;
+  font-size: 3vw;
   color: #000000;
   font-weight: 700;
 }
 
 .mission-section p, .story-section p {
   text-align: justify;
-  font-size: 28px;
+  font-size: 2vw;
   color: #8E8E8E;
 }
 
@@ -180,17 +180,17 @@ li {
 }
 
 .statistics-section__card__image {
-  width: 70px;
+  width: 6vw;
 }
 
 .statistics-section__card__title {
   color: #7B58C2;
-  font-size: 2em;
+  font-size: 3vw;
   font-weight: 600;
 }
 
 .statistics-section__card__paragraph {
-  font-size: 20px;
+  font-size: 1.5vw;
   font-weight: 500;
 }
 
@@ -205,7 +205,7 @@ li {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 35vw;
+  width: 40vw;
 }
 
 .story-section__text {
@@ -369,7 +369,6 @@ li {
 .maus-tratos .social-icons {
   display: flex;
   align-items: center;
-  gap: 16px;
 }
 
 .maus-tratos .social-icons a {
