@@ -117,18 +117,19 @@ li {
 
 .about-us-section {
   padding: 80px 100px 2.5px 100px;
+  position: relative;
 }
 
 .about-us-section h2 {
   white-space: nowrap;
-  font-size: 70px;
+  font-size: 60px;
   color: #000000;
   font-weight: 700;
 }
 
 .mission-section p, .story-section p {
   text-align: justify;
-  font-size: 30px;
+  font-size: 28px;
   color: #8E8E8E;
 }
 
@@ -141,23 +142,23 @@ li {
 .mission-section__text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 18em;
-  width: 38em;
+  width: 52vw;
   padding-bottom: 10em;
+  gap: 16px;
 }
 
 .mission-section img {
   position: absolute;
   right: 0;
-  height: 750px;
+  width: 40vw;
 }
 
 .statistics-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 30em;
+  height: 20vw;
 }
 
 .statistics-section__card {
@@ -178,9 +179,13 @@ li {
   padding: 10px 0;
 }
 
+.statistics-section__card__image {
+  width: 70px;
+}
+
 .statistics-section__card__title {
   color: #7B58C2;
-  font-size: 4em;
+  font-size: 2em;
   font-weight: 600;
 }
 
@@ -199,14 +204,15 @@ li {
 .story-section img {
   position: absolute;
   left: 0;
-  height: 800px;
+  bottom: 0;
+  width: 35vw;
 }
 
 .story-section__text {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  width: 52em;
+  width: 56vw;
   padding-bottom: 50px;;
 }
 
@@ -247,7 +253,7 @@ li {
 }
 
 .secao1 p {
-  font-size: 27px;
+  font-size: 22px;
   line-height: 1.6;
 }
 
@@ -273,7 +279,7 @@ li {
 }
 
 .secao2 p {
-  font-size: 28px;
+  font-size: 22px;
   line-height: 1.5;
   text-align: justify;
   display: flex;
