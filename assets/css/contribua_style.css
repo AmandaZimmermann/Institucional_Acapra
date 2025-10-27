@@ -106,6 +106,9 @@ li {
   font-size: 24px;
   margin-bottom: 20px;
 }
+.chave-pix {
+  margin-top: 0px;
+}
 
 .qrcode {
   width: 250px;
