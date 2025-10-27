@@ -13,6 +13,10 @@ body {
   background-color: var(--roxo-principal);
 }
 
+.instagram-acapra {
+  text-decoration: none;
+}
+
 .logo {
   height: 40px;
 }
